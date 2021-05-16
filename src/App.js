@@ -7,43 +7,6 @@ import React from 'react';
 
 const options = ["rock", "paper", "scissors"]
 
-/*
-//const rock = <p>You clicked Rock </p>
-//const paper = <p>You clicked Paper </p>
-///3const scissor = <p>You clicked Scissor </p>
-
-class clickedR extends React.Component{
-  render() {
-    
-    var num = <Random />;
-    return (
-      <div>
-        <h1>
-          You played Rock.
-        </h1>
-        if (num == 1){
-          <p>The computer played Rock too, Draw!</p>
-        }
-        else if (num == 2){
-          <p>The computer played Paper, the computer wins!</p>
-        }
-        else if (num == 3) {
-          <p>The computer played Scissor, you win!</p>
-        }
-      </div>
-    );
-  }
-  //ReactDOM.render(rock, document.getElementById('root'));
-  //ReactDOM.render(<Random />, document.getElementById('root'));
-}
-function clickedP(props) {
-  ReactDOM.render(paper, document.getElementById('root'));
-}
-function clickedS(props) {
-  ReactDOM.render(scissor, document.getElementById('root'));
-}
-*/
-
 class App extends React.Component{
   constructor(props) {
     super(props);
