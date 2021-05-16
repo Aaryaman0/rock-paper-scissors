@@ -64,8 +64,12 @@ class App extends React.Component{
 
   clicked() {
     this.setState({playerSelection: "You have clicked " + options[this.state.count]});
+    console.log(this.options);
+    console.log(this.state.count);
+    console.log(this.state.playerSelection);
     var num = this.Random();
     this.setState({computerSelection: "The computer chooses " + options[num]});
+    console.log(this.state.playerSelection);
      if (this.state.count === num){
        this.setState({result: "It is a Draw!"});
      }
@@ -75,7 +79,7 @@ class App extends React.Component{
      else if (num === ((this.state.count + 1) % 3)){
       this.setState({result: "The Computer Wins!"});
      }
-    }
+  }
 
   render() {
   return (
@@ -87,25 +91,22 @@ class App extends React.Component{
           Choose one of the following options:-
         </p>
         </header>
-    <Button variant="contained" color="primary" onMouseUp={() => {
+    <Button variant="contained" color="primary" onMouseDown={() => {
       console.log("Rock");
       this.setState({ count: 0 });
-      this.clicked();
-      }}>
+      }} onMouseUp={this.clicked}>
     Rock
     </Button>
-    <Button variant="contained" color="primary" onClick={() => {
+    <Button variant="contained" color="primary" onMouseDown={() => {
       console.log("Paper");
       this.setState({ count: 1 });
-      this.clicked();
-      }}>
+      }} onMouseUp={this.clicked}>
      Paper
      </Button>
-    <Button variant="contained" color="primary" onClick={() => {
-      console.log("Scissors");
+    <Button variant="contained" color="primary" onMouseDown={() => {
+      console.log("Scissor");
       this.setState({ count: 2 });
-      this.clicked();
-      }}>
+      }} onMouseUp={this.clicked}>
      Scissor
      </Button>
      <p>{this.state.playerSelection}</p>
